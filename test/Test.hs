@@ -13,6 +13,7 @@ import SimpleSym
 
 import qualified T1
 import qualified T2
+import qualified Jacobi
 
 tests :: TestTree
 tests = testGroup "Tests"
@@ -25,7 +26,7 @@ tests = testGroup "Tests"
   ]
 
 main :: IO ()
-main = defaultMain tests
+main = defaultMain tests >> defaultMain Jacobi.symTests
 
 -- main :: IO ()
 -- main = do
